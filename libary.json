@@ -1,6 +1,6 @@
 {
     "name": "OpenTherm Library",
-    "version": "1.1.6",
+    "version": "1.1.8",
     "description": "OpenTherm Library for HVAC system control communication using Arduino and ESP8266/ESP32 hardware. OpenTherm Library is based on OpenTherm protocol specification v2.2 and works with all OpenTherm compatible boilers.",
     "keywords": [
       "OpenTherm",

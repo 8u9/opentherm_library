@@ -452,15 +452,15 @@ const char *OpenTherm::messageTypeToString(OpenThermMessageType message_type)
 const char *OpenTherm::stautsToString(OpenThermStatus status)
 {
 	switch (status) {
-		case NOT_INITIALIZED:	   return "NOT_INITIALIZED";
-		case READY:	  return "READY";
-		case DELAY:	return "DELAY";
-		case REQUEST_SENDING:		return "REQUEST_SENDING";
-		case RESPONSE_WAITING:		return "RESPONSE_WAITING";
-		case RESPONSE_START_BIT:	   return "RESPONSE_START_BIT";
-		case RESPONSE_RECEIVING:	return "RESPONSE_RECEIVING";
-		case RESPONSE_READY: return "RESPONSE_READY";
-		case RESPONSE_INVALID: return "RESPONSE_INVALID";
+		case OpenThermStatus::NOT_INITIALIZED:	   return "NOT_INITIALIZED";
+		case OpenThermStatus::READY:	  return "READY";
+		case OpenThermStatus::DELAY:	return "DELAY";
+		case OpenThermStatus::REQUEST_SENDING:		return "REQUEST_SENDING";
+		case OpenThermStatus::RESPONSE_WAITING:		return "RESPONSE_WAITING";
+		case OpenThermStatus::RESPONSE_START_BIT:	   return "RESPONSE_START_BIT";
+		case OpenThermStatus::RESPONSE_RECEIVING:	return "RESPONSE_RECEIVING";
+		case OpenThermStatus::RESPONSE_READY: return "RESPONSE_READY";
+		case OpenThermStatus::RESPONSE_INVALID: return "RESPONSE_INVALID";
 		default:			  return "UNKNOWN";
 	}
 }
@@ -613,8 +613,8 @@ const char *OpenTherm::OpenThermMessageIDToString(OpenThermMessageID id) {
       return "MConfigMMemberIDcode";
     case OpenThermMessageID::SConfigSMemberIDcode:
       return "SConfigSMemberIDcode";
-    case OpenThermMessageID::Command:
-      return "Command";
+    case OpenThermMessageID::RemoteRequest:
+      return "RemoteRequest";
     case OpenThermMessageID::ASFflags:
       return "ASFflags";
     case OpenThermMessageID::RBPflags:
@@ -677,20 +677,16 @@ const char *OpenTherm::OpenThermMessageIDToString(OpenThermMessageID id) {
       return "TdhwSetUBTdhwSetLB";
     case OpenThermMessageID::MaxTSetUBMaxTSetLB:
       return "MaxTSetUBMaxTSetLB";
-    case OpenThermMessageID::HcratioUBHcratioLB:
-      return "HcratioUBHcratioLB";
     case OpenThermMessageID::TdhwSet:
       return "TdhwSet";
     case OpenThermMessageID::MaxTSet:
       return "MaxTSet";
-    case OpenThermMessageID::Hcratio:
-      return "Hcratio";
     case OpenThermMessageID::RemoteOverrideFunction:
       return "RemoteOverrideFunction";
     case OpenThermMessageID::OEMDiagnosticCode:
       return "OEMDiagnosticCode";
-    case OpenThermMessageID::BurnerStarts:
-      return "BurnerStarts";
+    case OpenThermMessageID::SuccessfulBurnerStarts:
+      return "SuccessfulBurnerStarts";
     case OpenThermMessageID::CHPumpStarts:
       return "CHPumpStarts";
     case OpenThermMessageID::DHWPumpValveStarts:
