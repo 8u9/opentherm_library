@@ -1,0 +1,37 @@
+{
+    "name": "OpenTherm Library",
+    "version": "1.1.6",
+    "description": "OpenTherm Library for HVAC system control communication using Arduino and ESP8266/ESP32 hardware. OpenTherm Library is based on OpenTherm protocol specification v2.2 and works with all OpenTherm compatible boilers.",
+    "keywords": [
+      "OpenTherm",
+      "HVAC",
+      "Arduino",
+      "ESP8266",
+      "ESP32"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/barbieri-pro/opentherm_library"
+    },
+    "authors": [
+      {
+        "name": "Ihor Melnyk",
+        "email": "ihor.melnyk@gmail.com"
+      },
+      {
+        "name": "Leonardo Barbieri",
+        "email": "leonardo@barbieri.pro"
+      }
+    ],
+    "license": "MIT", 
+    "homepage": "https://github.com/barbieri-pro/opentherm_library",
+    "frameworks": "arduino",
+    "platforms": [
+      "avr",
+      "sam",
+      "samd",
+      "espressif8266",
+      "espressif32"
+    ]
+  }
+  
